@@ -2,7 +2,7 @@ import BAC0
 import json
 import time
 # create a bacnet connection to connect to the devices, use your local machine IP address and the subnet below and also specify the port number if needed
-bacnet = BAC0.lite(ip="192.168.18.6/24" ,port=47809)  
+bacnet = BAC0.lite(ip="192.168.29.141/24" ,port=47808)  
 data = {}
 
 
@@ -13,7 +13,7 @@ def main():
             id = str(x)
         # Connect to the BACnet simulator using the IP address and port number
             value = bacnet.read(
-                "192.168.18.10:53522   "+id+" presentValue")
+                "192.168.29.141:53522   "+id+" presentValue")
             value = str(value)
             data["Analog_input"+id] = value
 
