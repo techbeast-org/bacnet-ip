@@ -13,7 +13,7 @@ def main():
             id = str(x)
         # Connect to the BACnet simulator using the IP address and port number
             value = bacnet.read(
-                "192.168.18.10:53522   "+id+" presentValue")
+                "192.168.18.10:53522 analogInputs "+id+" presentValue")
             value = str(value)
             data["Analog_input"+id] = value
 
